@@ -1,12 +1,12 @@
 import React from 'react'
 import '../Style/Login.css'
+import { accessUrl } from "../spotify";
 
 const Login = () => {
     return (
-        <div>
-             {/*Spotify Clone App*/}
-             {/*Login with spotify Button*/}
-             <h1>Login</h1>
+        <div className="login">
+            <img src="#" alt=""/>
+            <a href={ accessUrl }>Login with Spotify</a>
         </div>
     )
 }
