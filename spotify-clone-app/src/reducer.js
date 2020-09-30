@@ -3,6 +3,8 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
+    token: //null,
+    'BQB9zzzfZ7Lpx3i2Re5RebfjWXF1v6UpDo8ZCJMTokVNhpY_Wm6R212vqkcqaEtemDJvinqTSoP18oJ079sbEdebFuzin1Z62dSA03xgm2Lxargli690vuWDqTJD3mDqSutcbZhkqYPASiNNT4UpLExscG5vnPLxrF6LQswXIKuSHZ6XfHXO',
 };
 
 //Listen to Actions
@@ -15,7 +17,18 @@ const reducer = (state, action) => {
                ...state,
                user: action.user
            };
-    
+
+        case 'SET_TOKEN':
+            return{
+                ...state,
+                token: action.token,
+            };
+
+        case 'SET_PLAYLISTS':
+            return{
+                ...state,
+                playlists: action.playlists,
+            };
         default:
             return state;
     }
